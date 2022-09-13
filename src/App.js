@@ -29,24 +29,26 @@ function App() {
   console.log(productsList);
 
   const getStocks = () => {
-    Axios.get("http://localhost:3005/stocks").then((response) => {
-      const newProductList = response.data.map((product) => {
-        return {
-          ID: product.ID,
-          Name: product.Name,
-          newQuan: "",
-          Quantity: product.Quantity,
-          Supplier: product.Supplier,
-          Month: product.Month,
-        };
-      });
-      setList(newProductList);
-      // console.log(response)
-    });
+    Axios.get("https://crud-backend-deploy.herokuapp.com/stocks").then(
+      (response) => {
+        const newProductList = response.data.map((product) => {
+          return {
+            ID: product.ID,
+            Name: product.Name,
+            newQuan: "",
+            Quantity: product.Quantity,
+            Supplier: product.Supplier,
+            Month: product.Month,
+          };
+        });
+        setList(newProductList);
+        // console.log(response)
+      }
+    );
   };
 
   const Addproduct = () => {
-    Axios.post("http://localhost:3005/create", {
+    Axios.post("https://crud-backend-deploy.herokuapp.com/create", {
       idnum: idnum,
       name: name,
       Quantity: Quantity,
@@ -69,7 +71,7 @@ function App() {
   //ตัวหลังทำให้
   const updateQuan = (catId, newQuan) => {
     console.log(catId);
-    Axios.put("http://localhost:3005/update", {
+    Axios.put("https://crud-backend-deploy.herokuapp.com/update", {
       Quantity: newQuan,
       id: catId,
     }).then((response) => {
@@ -91,13 +93,15 @@ function App() {
   };
 
   const deleteStocks = (id) => {
-    Axios.delete(`http://localhost:3005/delete/${id}`).then((response) => {
-      setList(
-        productsList.filter((val) => {
-          return val.ID != id;
-        })
-      );
-    });
+    Axios.delete(`https://crud-backend-deploy.herokuapp.com/delete/${id}`).then(
+      (response) => {
+        setList(
+          productsList.filter((val) => {
+            return val.ID != id;
+          })
+        );
+      }
+    );
   };
 
   const handleCahangeNewQuan = (event, id) => {
