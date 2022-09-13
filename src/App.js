@@ -97,7 +97,7 @@ function App() {
       (response) => {
         setList(
           productsList.filter((val) => {
-            return val.ID != id;
+            return val.ID !== id;
           })
         );
       }
