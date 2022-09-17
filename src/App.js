@@ -136,6 +136,7 @@ function App() {
           <input
             type="number"
             className="form-control"
+            value={idnum}
             onChange={(event) => {
               setID(event.target.value);
             }}
@@ -146,6 +147,7 @@ function App() {
           <input
             type="text"
             className="form-control"
+            value={name}
             onChange={(event) => {
               setName(event.target.value);
             }}
@@ -156,6 +158,7 @@ function App() {
           <input
             type="text"
             className="form-control"
+            value={Quantity}
             onChange={(event) => {
               setQuantity(event.target.value);
             }}
@@ -166,6 +169,7 @@ function App() {
           <input
             type="text"
             className="form-control"
+            value={supplier}
             onChange={(event) => {
               setSupplier(event.target.value);
             }}
@@ -176,6 +180,7 @@ function App() {
           <input
             type="text"
             className="form-control"
+            value={monthadded}
             onChange={(event) => {
               setMonth(event.target.value);
             }}
