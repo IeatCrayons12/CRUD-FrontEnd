@@ -126,62 +126,60 @@ function App() {
     <div className="App container m-3">
       <h1 className="m-3">Stocks info</h1>
       <div className="information">
-        <form action="">
-          <div className="mb-3">
-            <label className="form label">ProductsID:</label>
-            <input
-              type="number"
-              className="form-control"
-              onChange={(event) => {
-                setID(event.target.value);
-              }}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form label">Productsname:</label>
-            <input
-              type="text"
-              className="form-control"
-              onChange={(event) => {
-                setName(event.target.value);
-              }}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form label">Productquantity:</label>
-            <input
-              type="text"
-              className="form-control"
-              onChange={(event) => {
-                setQuantity(event.target.value);
-              }}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form label">SupplierName:</label>
-            <input
-              type="text"
-              className="form-control"
-              onChange={(event) => {
-                setSupplier(event.target.value);
-              }}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form label">Month:</label>
-            <input
-              type="text"
-              className="form-control"
-              onChange={(event) => {
-                setMonth(event.target.value);
-              }}
-            />
-          </div>
+        <div className="mb-3">
+          <label className="form label">ProductsID:</label>
+          <input
+            type="number"
+            className="form-control"
+            onChange={(event) => {
+              setID(event.target.value);
+            }}
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form label">Productsname:</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form label">Productquantity:</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(event) => {
+              setQuantity(event.target.value);
+            }}
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form label">SupplierName:</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(event) => {
+              setSupplier(event.target.value);
+            }}
+          />
+        </div>
+        <div className="mb-3">
+          <label className="form label">Month:</label>
+          <input
+            type="text"
+            className="form-control"
+            onChange={(event) => {
+              setMonth(event.target.value);
+            }}
+          />
+        </div>
 
-          <button className="btn btn-success" onClick={Addproduct}>
-            Add products
-          </button>
-        </form>
+        <button className="btn btn-success" onClick={Addproduct}>
+          Add products
+        </button>
       </div>
       <br></br>
       <div className="Stocks">
