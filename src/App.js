@@ -65,6 +65,11 @@ function App() {
           monthadded: monthadded,
         },
       ]);
+      setID(0);
+      setName("");
+      setQuantity(0);
+      setSupplier("");
+      setMonth("");
     });
   };
 
