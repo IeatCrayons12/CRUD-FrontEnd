@@ -3,9 +3,9 @@ import { useState } from "react";
 import Axios from "axios";
 
 function App() {
-  const [idnum, setID] = useState(0);
+  const [idnum, setID] = useState("");
   const [name, setName] = useState("");
-  const [Quantity, setQuantity] = useState(0);
+  const [Quantity, setQuantity] = useState("");
   const [supplier, setSupplier] = useState("");
   const [monthadded, setMonth] = useState("");
 
@@ -65,12 +65,12 @@ function App() {
           monthadded: monthadded,
         },
       ]);
-      setID(0);
-      setName("");
-      setQuantity(0);
-      setSupplier("");
-      setMonth("");
     });
+    setID("");
+    setName("");
+    setQuantity("");
+    setSupplier("");
+    setMonth("");
   };
 
   //ตัวหลังทำให้
